@@ -17,7 +17,7 @@ Continuer, accepter la memory size proposée
 * -> Create a virtual hard disk now
 * -> VDI
 * -> Dynamically allocated 
-//Meme si vous choisisez une taille de memoire precise elle reste fictive et sera aloué au fur et a mesure que vous necessiterez de memoire suplementaire,
+//Meme si vous choisisez une taille de memoire precise elle reste virtuel et sera aloué au fur et a mesure que vous necessiterez de memoire suplementaire,
 //c'est ce qu'on appelle une allocation dynamique
 
 Continuer
@@ -35,4 +35,19 @@ Start la VM
 **INSTALATION**
 
 Choisir "install"
+Laisser le hostname par defaut
+domaine name -> "mydomain" par exemple ou skip
+choisir un password root
+creer un user non-root, choisir son nom et son password
 
+*Partitioner le disk*
+* -> Manual 
+* -> VBOX HARDDISK -> yes
+1. -> free space-> create a new partition-> 4.2 GB-> logical-> beginning-> Use as : Journaling file sys -> Mount point : '/'-> done setting up the partition
+2. -> free space-> create a new partition-> 3.4 GB-> logical-> beginning-> Use as : Journaling file sys -> Mount point : '/home'-> done setting up the partition
+3. -> free space-> create a new partition-> ~1.0 GB-> logical-> beginning-> Use as : Swap Area -> done setting up the partition
+//La swap area est un espace de stockage utilisé pour décharger la mémoire vive physique (RAM) de votre ordinateur lorsque celle-ci arrive à saturation
+
+Finish partitioning and write changes to disk ->yes
+
+**CONFIG**
