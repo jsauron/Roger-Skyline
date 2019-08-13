@@ -91,6 +91,8 @@ on configure donc notre reseaux comme tel :
 * -> décommenter "publickey authentification - yes" //impose l'acces via une public key
 * -> "permitrootlogin - no" // root est present partout
 
+* -> 'sudo servce ssh restart'  //redemmare le service avec les configurations à jour
+
 *Sur mon terminal (coté client)*
 
 * -> 'ssh-keygen' (genere une key)
