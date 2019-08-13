@@ -52,7 +52,7 @@ Finish partitioning and write changes to disk ->yes
 
 *******************************
 
-**CONFIG**
+***CONFIG***
 
 * -> 'su' pour se connecter en tant que root
 * -> 'apt-get update' et 'apt-get upgrade' permet de mettre a jour les packages
@@ -83,6 +83,7 @@ on configure donc notre reseaux comme tel :
 ********************************
 
 ***SSH***
+
 *Sur ma Vm (coté serveur)*
 
 * -> 'sudo vi /etc/ssh/sshd_config"
