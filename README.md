@@ -73,7 +73,7 @@ on configure donc notre reseaux comme tel :
       broadcast ***.***.255.255
       gateway  **.**.254.254
       
-      "
+      
 
 * -> 'ip a' affiche l'adresse IP //voir man ip
 * -> 'sudo reboot' //mettre a jour les modifications
