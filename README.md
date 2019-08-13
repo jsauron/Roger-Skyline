@@ -118,3 +118,5 @@ https://www.linode.com/docs/security/authentication/use-public-key-authenticatio
 https://wiki.debian.org/iptables
 
 https://doc.ubuntu-fr.org/iptables
+
+https://sebsauvage.net/comprendre/tcpip/
