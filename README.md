@@ -59,7 +59,45 @@ Finish partitioning and write changes to disk ->yes
 * -> 'apt-get install sudo + ssh -y' // le flag -y permet d'accepter automatiquement l'installaton
 * -> 'sudo usermod -aG sudo 'user-name'' // inscrit le user dans le sudo groupe, verifier le file 'vi /etc/sudoers'
 
-*-> 'sudo vi /etc/network/interfaces'
+* -> 'sudo vi /etc/network/interfaces' // accede au fichier interfaces + d'info 'man interfaces'
+DHCP : methode dynamique de configuartion reseau, via le protocole DHCP on se voit attribuer une adresse IP automatiquement.
+L'avantage avec ce protocole c'est que l'on evite les conflit.
+Dans notre cas nous allons configurer manuelement notre IP static avec un masque /30 (demandé dans le sujet)
+
+On ne modifie pas le loopback interface
+on configure donc notre reseaux comme tel :
+    "
+   
+      address ***.***.***.*** (IP adresses)
+      netmask 255.255.255.252
+      broadcast ***.***.255.255
+      gateway  **.**.254.254
+      
+      "
+
+* -> 'ip a' affiche l'adresse IP //voir man ip
+* -> 'sudo reboot' //mettre a jour les modifications
+
+* -> 'ip r' //affiche la configuration du reseau
+
+********************************
+
+***SSH***
+*Sur ma Vm (coté serveur)*
+
+* -> 'sudo vi /etc/ssh/sshd_config"
+* -> décommenter le "port 22" et le remplacer par un numero de port libre, la commande 'service ssh status' aide
+* -> décommenter "publickey authentification - yes" //impose l'acces via une public key
+* -> "permitrootlogin - no" // root est present partout
+
+*Sur mon terminal (coté client)*
+
+* -> 'ssh-keygen' (genere une key)
+* -> creer une passphrase
+* -> 'ssh-copy-id -i ~/.ssh/id_rsa.pub user-name@ipadress -p numerodeport' install la public key sur le serveur (vm).
+* -> ssh username@ipadress -p nuemro de port' //connexion securisé a votre serveur en ssh
+
+
 ******************************
 
 ***Sources:***
