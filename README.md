@@ -51,3 +51,20 @@ creer un user non-root, choisir son nom et son password
 Finish partitioning and write changes to disk ->yes
 
 **CONFIG**
+
+******************************
+
+***Sources:***
+https://wiki.debian.org/fr/NetworkConfiguration
+
+https://www.ssh.com/ssh/copy-id
+
+https://mtodorovic.developpez.com/linux/programmation-avancee/?page=page_12
+
+https://technique.arscenic.org/commandes-linux-de-base/la-gestion-des-utilisateurs/article/ajout-et-suppression-d-utilisateurs
+
+https://www.linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/
+
+https://wiki.debian.org/iptables
+
+https://doc.ubuntu-fr.org/iptables
