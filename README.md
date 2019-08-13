@@ -87,9 +87,9 @@ on configure donc notre reseaux comme tel :
 *Sur ma Vm (coté serveur)*
 
 * -> 'sudo vi /etc/ssh/sshd_config"
-* -> décommenter le "port 22" et le remplacer par un numero de port libre, la commande 'service ssh status' aide
+* -> décommenter le "port 22" et le remplacer par un numero de port libre, le fichier /etc/services aide
 * -> décommenter "publickey authentification - yes" //impose l'acces via une public key
-* -> "permitrootlogin - no" // root est present partout
+* -> "permitrootlogin - no" // empecher les conxion en root au serveur
 
 * -> 'sudo servce ssh restart'  //redemmare le service avec les configurations à jour
 
