@@ -57,8 +57,9 @@ Finish partitioning and write changes to disk ->yes
 * -> 'su' pour se connecter en tant que root
 * -> 'apt-get update' et 'apt-get upgrade' permet de mettre a jour les packages
 * -> 'apt-get install sudo + ssh -y' // le flag -y permet d'accepter automatiquement l'installaton
-
 * -> 'sudo usermod -aG sudo 'user-name'' // inscrit le user dans le sudo groupe, verifier le file 'vi /etc/sudoers'
+
+*-> 'sudo vi /etc/network/interfaces'
 ******************************
 
 ***Sources:***
