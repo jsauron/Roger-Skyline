@@ -19,9 +19,12 @@ Continuer, accepter la memory size proposée
 * -> Dynamically allocated 
 //Meme si vous choisisez une taille de memoire precise elle reste fictive et sera aloué au fur et a mesure que vous necessiterez de memoire suplementaire,
 //c'est ce qu'on appelle une allocation dynamique
+
 Continuer
+
 Rentrer le path vers votre image ISO telecharger precedement
-ex : /Users/*user*/Downloads/debian-10.0.0-amd64-netinst.vdi
+
+* ex : /Users/*user*/Downloads/debian-10.0.0-amd64-netinst.vdi
 * ->selectionner une taille de 8.00GB
 
 Une fois votre VM creee vous pouvez la configuer dans settings:
