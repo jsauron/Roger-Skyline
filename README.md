@@ -122,3 +122,5 @@ https://doc.ubuntu-fr.org/iptables
 https://sebsauvage.net/comprendre/tcpip/
 
 https://lea-linux.org/documentations/Iptables
+
+https://debian-facile.org/viewtopic.php?id=16380
