@@ -127,3 +127,5 @@ https://debian-facile.org/viewtopic.php?id=16380
 
 https://www.quennec.fr/book/export/html/262
 
+https://opensource.com/article/18/10/iptables-tips-and-tricks
+
