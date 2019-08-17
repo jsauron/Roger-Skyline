@@ -136,3 +136,5 @@ https://wiki.debian-fr.xyz/Portsentry
 https://web.developpez.com/tutoriels/creer-serveur-web-nginx-php-mariadb/#LIII-A
 
 https://openclassrooms.com/fr/courses/1401411-creer-son-forum-de-toutes-pieces/1401751-inscription-et-connexion
+
+https://sysadmin.cyklodev.com/creer-un-certificat-ssl-auto-signe-pour-nginx/
