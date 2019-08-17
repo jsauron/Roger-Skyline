@@ -1,0 +1,61 @@
+#!/bin/bash
+
+#reset rules
+
+iptables -F
+iptables -X
+
+iptables -t nat -F
+iptables -t nat -X
+
+iptables -t mangle -F
+iptables -t mangle -X
+
+#On drop le trafic entrant, sortant, et le forward
+
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+iptables -P FORWARD DROP
+
+#et on set ce qu'on accepte
+
+
+#loopback (boucle local)
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
+
+#ping
+
+iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
+
+#DNS
+
+iptables -A OUTPUT -p tcp		--dport 53		-j ACCEPT
+iptables -A OUTPUT -p udp		--dport 53		-j ACCEPT
+
+#ssh
+iptables -A INPUT -p tcp		--dport 2222		-j ACCEPT
+
+#http
+iptables -A OUTPUT -p tcp		--dport 80		-j ACCEPT
+
+#https
+iptables -A OUTPUT -p tcp		--dport 443		-j ACCEPT
+
+#connexion deja etablis
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables -A OUTPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+#Protection des scan
+
+#iptables -N port-scanning
+#iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN
+#iptables -A port-scanning -j DROP
+
+#iptables -A INPUT -p tcp  -m multiport! --dport 2222,80,443 -j REJECT
+#iptables -A INPUT -p tcp -m multiport ! -m recent --update --second 3600 --hitcount 3 -j REJECT
+#iptables -A INPUT -p udp -m multiport ! --dport 2222,80,443 -m recent --set -j LOG
+#iptables -A INPUT -p udp -m multiport ! -m recent --update --second 3600 --hitcount 3 -j REJECT
+
+#iptables -A INPUT -p tcp -syn -m multiport --dport 2222,80,443 -m connlimit --connlimit-above 3 -j REJECT --reject-with-tcp-reset
