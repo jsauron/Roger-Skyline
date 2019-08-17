@@ -129,4 +129,8 @@ https://www.quennec.fr/book/export/html/262
 
 https://opensource.com/article/18/10/iptables-tips-and-tricks
 
+https://javapipe.com/blog/iptables-ddos-protection/
+
+https://wiki.debian-fr.xyz/Portsentry
+
 https://web.developpez.com/tutoriels/creer-serveur-web-nginx-php-mariadb/#LIII-A
