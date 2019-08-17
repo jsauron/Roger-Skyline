@@ -1,0 +1,2 @@
+# 'ls -l /etc/crontab'
+-rw-r--r-- 1 root root 1403 Aug 15 12:34 /etc/crontab
