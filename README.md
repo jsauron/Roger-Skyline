@@ -98,7 +98,7 @@ on configure donc notre reseaux comme tel :
 * -> 'ssh-keygen' (genere une key)
 * -> creer une passphrase
 * -> 'ssh-copy-id -i ~/.ssh/id_rsa.pub user-name@ipadress -p numerodeport' install la public key sur le serveur (vm).
-* -> ssh username@ipadress -p nuemro de port' //connexion securisé a votre serveur en ssh
+* -> ssh username@ipadress -p numero de port' //connexion securisé a votre serveur en ssh
 
 
 ******************************
@@ -129,3 +129,4 @@ https://www.quennec.fr/book/export/html/262
 
 https://opensource.com/article/18/10/iptables-tips-and-tricks
 
+https://web.developpez.com/tutoriels/creer-serveur-web-nginx-php-mariadb/#LIII-A
